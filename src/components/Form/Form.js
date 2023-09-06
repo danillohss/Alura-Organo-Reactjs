@@ -4,7 +4,7 @@ import Button from '../Button/Button.js';
 import Select from '../Select/Select.js';
 import { useState } from 'react';
 
-const Form = () => {
+const Form = (props) => {
     const [name, setName] = useState('')
     const [office, setOffice] = useState('')
     const [image, setImage] = useState('')
@@ -20,8 +20,13 @@ const Form = () => {
         'Inovação e Gestão'
     ]
     const onSave = (e) => {
-        console.log(team)
         e.preventDefault()
+        props.setNewColaborator({
+            name,
+            office,
+            image,
+            team
+        })
     };
     return (
         <section className='form'>
