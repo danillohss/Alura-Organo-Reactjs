@@ -10,15 +10,6 @@ const Form = (props) => {
     const [image, setImage] = useState('')
     const [team, setTeam] = useState('')
 
-
-    const teams = [
-        'Programação',
-        'Front-end',
-        'Data Science',
-        'UX e Design',
-        'Mobile',
-        'Inovação e Gestão'
-    ]
     const onSave = (e) => {
         e.preventDefault()
         props.setNewColaborator({
@@ -55,7 +46,7 @@ const Form = (props) => {
                 <Select
                     required={true}
                     label="Categoria"
-                    itens={teams}
+                    itens={props.teams}
                     value={team}
                     updated={value => setTeam(value)}
                 />
