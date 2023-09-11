@@ -46,7 +46,6 @@ function App() {
   const [colaborators, setColaborators] = useState([]);
 
   const addNewColaborator = (colaborator) => {
-    console.log(colaborator);
     setColaborators([...colaborators, colaborator]);
   }
 
@@ -63,6 +62,7 @@ function App() {
           key={team.name}
           primaryColor={team.primaryColor}
           secondColor={team.secondColor}
+          colaborators={colaborators.filter(colaborator => colaborator.team === team.name)}
         />
       )}
     </div>

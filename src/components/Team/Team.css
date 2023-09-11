@@ -3,6 +3,13 @@
     padding: 32px;
 }
 
+.team .colaborators {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
 .team h3 {
     font-size: 32px;
     border-bottom: 4px solid;

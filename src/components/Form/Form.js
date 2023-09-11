@@ -18,6 +18,10 @@ const Form = (props) => {
             image,
             team
         })
+        setName('');
+        setOffice('');
+        setImage('');
+        setTeam('');
     };
     return (
         <section className='form'>
@@ -31,23 +35,23 @@ const Form = (props) => {
                     placeholder="Digite o nome"
                 />
                 <Input
+                    value={office}
                     required={true}
                     label="Cargo"
-                    value={office}
                     updated={value => setOffice(value)}
                     placeholder="Digite o cargo"
                 />
                 <Input
-                    label="Imagem"
-                    placeholder="Endereço da imagem"
                     value={image}
+                    label="Imagem"
+                    placeholder="Exemplo: https://github.com/NomeUsuario.png"
                     updated={value => setImage(value)}
                 />
                 <Select
+                    value={team}
                     required={true}
                     label="Categoria"
                     itens={props.teams}
-                    value={team}
                     updated={value => setTeam(value)}
                 />
                 <Button text='Criar card' />

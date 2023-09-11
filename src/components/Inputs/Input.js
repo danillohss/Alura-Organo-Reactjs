@@ -4,7 +4,6 @@ const Input = (props) => {
 
     const inputValue = (e) => {
         props.updated(e.target.value)
-        console.log(props.updated)
     }
     return (
         <div className="text">
